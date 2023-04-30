@@ -21,7 +21,7 @@ https://www.youtube.com/watch?v=sbHvogpfwro&ab_channel=BLUETOOTHSHARK1570X
 ### **2+ image assets (such as .png files)**
 ---
 - Image 1: Among Us character (self made in Photoshop), based on the characters from the game Among Us
-- Image 2/3: Fish from loading screen (self made in Photoshop)
+- Image 2/3: Fish from loading screen (self made in Photoshop), loading sign fish based on Stunfisk from Pokemon
 - Image 4: Fish Background image from (cropped and edited in Photoshop to be black and white): https://www.treehugger.com/thmb/zy-3sTX8smSnZfHLt80oGif6iKY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-583688368-0867c52936954e58a307c0ade4fa69df.jpg 
 
 ### **2+ geometric shapes**
