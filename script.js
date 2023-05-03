@@ -1,3 +1,18 @@
+//extra scene to make user click Chrome window to enable in game audio
+class Start extends Phaser.Scene{
+    constructor() {
+        super("start");
+    }
+
+    create() {
+        this.input.once('pointerdown', () => {
+            this.scene.start('intro');
+        });
+
+        this.add.text(400,300, "click to start", {font: "40px Georgia"}).setOrigin(0.5);
+    }
+}
+
 class Intro extends Phaser.Scene{
     constructor() {
         super("intro");
@@ -15,7 +30,7 @@ class Intro extends Phaser.Scene{
         });
 
         //create sprites
-        let text = this.add.text(300, 280, "Suspicious Games", {font: "40px Georgia", color: "#eb4034"});
+        let text = this.add.text(300, 270, "Suspicious Games", {font: "40px Georgia", color: "#eb4034"});
         let amogus1 = this.add.sprite(-200, 300, 'amogus');
         let amogus2 = this.add.sprite(1000, 300, 'amogus');
         let amogus3 = this.add.sprite(400, -200, 'amogus');
@@ -154,11 +169,13 @@ class Title extends Phaser.Scene{
     }
 
     preload () {
-
+        this.load.image('logo', './assets/image/logo.png');
     }
 
     create() {
         this.add.text(30,30, "title");
+
+        
     }
 }
 
@@ -168,7 +185,7 @@ let config = {
     width: 800,
     height: 600,
     backgroundColor: 0x000000,
-    scene: [Intro, LoadingScreen, Title]
+    scene: [Start, Intro, LoadingScreen, Title]
 }
 
 let game = new Phaser.Game(config);
