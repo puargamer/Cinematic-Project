@@ -169,11 +169,43 @@ class Title extends Phaser.Scene{
     }
 
     preload () {
-        this.load.image('logo', './assets/image/logo.png');
+        this.load.image('logo', './assets/images/logo.png');
+        this.load.image('background', './assets/images/fish background.png');
     }
 
     create() {
-        this.add.text(30,30, "title");
+        //background
+        //let background = this.add.image(300,300,'background').setOrigin(.5);
+        //background.scale(.01);
+
+        //create assets
+        let logo = this.add.image(275,100,'logo').setOrigin(.5);
+        let rectangle1 = this.add.rectangle(298,180,512,10, 0x3c78d8).setOrigin(.5);
+
+        let duel = this.add.text(50, 250, "DUEL", {font: "40px Arial", color: "#ffffff"});
+        let options = this.add.text (50, 350, "Options", {font: "40px Arial", color: "#ffffff"});
+        let exit = this.add.text (50, 450, "Exit", {font: "40px Arial", color: "#ffffff"});
+
+        let text = this.add.text(650, 300, 
+`The year is 2019. 
+Unreal fish things have 
+invaded the planet. 
+Can you fish them all?`, {font: "20px Arial", color: "#ffffff"}).setOrigin(.5);
+        let rectangle2 = this.add.rectangle(650,225,250,10,0x3c78d8);
+        let rectangle3 = this.add.rectangle(650,375,250,10,0x3c78d8);
+
+
+        let cursor = this.add.ellipse(350, 270, 200, 20, 0xd89040,1);
+
+        this.add.tween({
+            targets: cursor,
+            alpha: 0,
+            ease: 'Power2',
+            duration: 1200,
+            repeat: -1
+        });
+
+        
 
         
     }
