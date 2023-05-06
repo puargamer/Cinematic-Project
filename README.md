@@ -38,7 +38,7 @@ Right body text in final title screen
 
 ### **1+ fading scene transition (e.g. fade to black)**
 ---
-2 Fading transitions, seen in first and second scenes
+2 Fading transitions, seen transitioning from scenes 1-2 and 2-3 (2-3 now replaced with fancy transition)
 
 ### **1+ object motion animation (e.g. sliding in)**
 ---

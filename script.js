@@ -103,6 +103,7 @@ class LoadingScreen extends Phaser.Scene{
     }
 
     create() {
+        this.cameras.main.fadeIn(1000);
 
         this.input.once('pointerdown', () => {
 
