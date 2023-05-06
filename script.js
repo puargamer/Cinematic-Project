@@ -86,7 +86,6 @@ class Intro extends Phaser.Scene{
                 }
             ]
         })
-
     }
 }
 
@@ -106,8 +105,20 @@ class LoadingScreen extends Phaser.Scene{
     create() {
 
         this.input.once('pointerdown', () => {
-            this.scene.start('title');
-        });
+
+            //effect
+            let fx = this.cameras.main.postFX.addWipe();
+            
+            //transition
+            this.scene.transition({
+                target: 'title',
+                duration: 2000,
+                moveBelow: true,
+                onUpdate: (progress) => {
+                    fx.progress = progress;
+                }
+            });
+        })
 
         
         //background
