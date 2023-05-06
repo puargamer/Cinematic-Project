@@ -206,8 +206,7 @@ class Title extends Phaser.Scene{
 
     create() {
         //background
-        //let background = this.add.image(300,300,'background').setOrigin(.5);
-        //background.scale(.01);
+        let background = this.add.image(300,300,'background').setOrigin(.5);
 
         //create assets
         let logo = this.add.image(275,100,'logo').setOrigin(.5);
