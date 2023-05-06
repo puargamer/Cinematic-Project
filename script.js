@@ -25,9 +25,15 @@ class Intro extends Phaser.Scene{
 
     create() {
 
+        //manual next
         this.input.once('pointerdown', () => {
             this.scene.start('loadingscreen');
-        });
+        })
+
+        //auto next
+        this.time.delayedCall(12000, () => {
+            this.scene.start('loadingscreen');
+        })
 
         //create sprites
         let text = this.add.text(300, 270, "Suspicious Games", {font: "40px Georgia", color: "#eb4034"});
@@ -105,11 +111,24 @@ class LoadingScreen extends Phaser.Scene{
     create() {
         this.cameras.main.fadeIn(1000);
 
-        this.input.once('pointerdown', () => {
+        //effect
+        let fx = this.cameras.main.postFX.addWipe();
 
-            //effect
-            let fx = this.cameras.main.postFX.addWipe();
-            
+        //manual next
+        this.input.once('pointerdown', () => {  
+            //transition
+            this.scene.transition({
+                target: 'title',
+                duration: 2000,
+                moveBelow: true,
+                onUpdate: (progress) => {
+                    fx.progress = progress;
+                }
+            });
+        })
+        
+        //auto next
+        this.time.delayedCall(4000, () => {
             //transition
             this.scene.transition({
                 target: 'title',
